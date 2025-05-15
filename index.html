@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XInicio</title>
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/templatemo-xtra-blog.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header class="tm-header" id="tm-header">
+        <div class="tm-header-wrapper">
+            <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="tm-site-header">
+                <div class="mb-3 mx-auto tm-site-logo"><i class="fas fa-times fa-2x"></i></div>
+                <h1 class="text-center">PROYECTO ELECTRONOCA</h1>
+            </div>
+            <nav class="tm-nav" id="tm-nav">
+                <ul>
+                    <li class="tm-nav-item"><a href="index.html" class="tm-nav-link">
+                            <i class="fas fa-home"></i>
+                            BLOG HOME
+                        </a></li>
+                    <li class="tm-nav-item"><a href="post.html" class="tm-nav-link">
+                            <i class="fas fa-pen"></i>
+                            VIDEO POST
+                        </a></li>
+                    <li class="tm-nav-item active"><a href="about.html" class="tm-nav-link">
+                            <i class="fas fa-users"></i>
+                            ENSAMBLAJE
+                        </a></li>
+                    <li class="tm-nav-item"><a href="contact.html" class="tm-nav-link">
+                            <i class="far fa-comments"></i>
+                            CONTACTANOS
+                        </a></li>
+                </ul>
+            </nav>
+            <div class="tm-mb-65">
+                <a href="https://facebook.com" class="tm-social-link">
+                    <i class="fab fa-facebook tm-social-icon"></i>
+                </a>
+                <a href="https://twitter.com" class="tm-social-link">
+                    <i class="fab fa-twitter tm-social-icon"></i>
+                </a>
+                <a href="https://instagram.com" class="tm-social-link">
+                    <i class="fab fa-instagram tm-social-icon"></i>
+                </a>
+                <a href="https://linkedin.com" class="tm-social-link">
+                    <i class="fab fa-linkedin tm-social-icon"></i>
+                </a>
+            </div>
+            <p class="tm-mb-80 pr-5 text-white">
+                Bienvenido a mi blog electrónico, un espacio dedicado a compartir proyectos, ideas y conocimientos sobre
+                el fascinante mundo de la electrónica.
+            </p>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <main class="tm-main">
+            <div class="row tm-row tm-mb-30">
+                <div class="col-12">
+                    <hr class="tm-hr-primary tm-mb-55">
+                    <img src="img/señales analogicas.jpg" alt="Image" class="img-fluid">
+                </div>
+            </div>
+            <div class="row tm-row tm-mb-40">
+                <div class="col-12">
+                    <div class="mb-4">
+                        <h2 class="pt-2 tm-mb-40 tm-color-primary tm-post-title">Generador de señales analógico
+                            multifunción</h2>
+                        <p>
+                            En esta ocasión, quiero presentarles un proyecto especialmente interesante: el generador de
+                            señales analógico multifunción. Este dispositivo está compuesto por varias etapas que
+                            trabajan en conjunto para generar diferentes tipos de ondas, tales como senoidales,
+                            triangulares y cuadradas. A lo largo de este blog, exploraremos el diseño, funcionamiento y
+                            aplicaciones de este generador, ideal tanto para estudiantes como para entusiastas de la
+                            electrónica que buscan comprender y experimentar con señales analógicas. ¡Acompáñame en este
+                            recorrido y descubre cómo puedes construir y aprovechar tu propio generador de señales
+                            multifunción!
+                        </p>
+                        <h3 class="pt-2 tm-mb-30 tm-color-primary tm-post-subtitle">Explicación de su funcionalidad</h2>
+                            <p>
+                                El proyecto presentado consiste en un generador de señales analógicas multifunción que
+                                utiliza como base el popular temporizador 555, diferenciándose de otras alternativas más
+                                avanzadas como el XR2206. Aunque el XR2206 ofrece una calidad de señal superior, mayor
+                                rango
+                                de frecuencias y mejor relación señal-ruido, el diseño con el 555 destaca por su
+                                sencillez y
+                                bajo costo, lo que lo convierte en una excelente opción para quienes buscan una solución
+                                accesible y fácil de implementar, incluso sobre una placa o un protoboard.
+                            </p>
+                            <p>
+                                Una de las principales ventajas de este circuito es que no requiere una fuente de
+                                alimentación simétrica, funcionando correctamente con voltajes de entre 3V y 12V. Para
+                                simplificar al máximo el montaje, se ha seleccionado un rango de frecuencias de audio
+                                que va
+                                aproximadamente desde los 400 Hz hasta los 10 kHz, determinado por la configuración RC
+                                del
+                                555 operando en modo astable.
+                            </p>
+                            <p>
+                                El circuito genera inicialmente una onda cuadrada, que puede utilizarse directamente
+                                como
+                                señal de salida para pruebas, sincronización o como entrada para otros instrumentos,
+                                como un
+                                osciloscopio. Posteriormente, la señal pasa por un condensador de acoplamiento que
+                                elimina
+                                el componente de corriente continua, y luego atraviesa una serie de filtros RC de
+                                segundo
+                                orden. En el punto intermedio de estos filtros se obtiene una onda triangular, mientras
+                                que
+                                la salida final ofrece una señal senoidal, aunque con una amplitud que varía en función
+                                de
+                                la frecuencia debido a la atenuación de los filtros.
+                            </p>
+                            <p>
+                                La selección entre las salidas triangular y senoidal se realiza mediante un interruptor
+                                inversor, permitiendo flexibilidad en el tipo de señal entregada al usuario. Ambas
+                                salidas
+                                alimentan la entrada de un pequeño amplificador de audio basado en el LM386, el cual
+                                actúa
+                                como buffer y permite ajustar la amplitud de la señal mediante un potenciómetro,
+                                funcionando
+                                como control de “volumen”. Finalmente, una resistencia de 100 ohmios en la salida
+                                asegura
+                                una
+                                impedancia estándar adecuada para la mayoría de las aplicaciones de laboratorio.
+                            </p>
+                            <p>
+                                Este generador de funciones es ideal para quienes buscan experimentar y aprender sobre
+                                generación de señales analógicas, ofreciendo una alternativa económica y práctica para
+                                el
+                                desarrollo de proyectos electrónicos.
+                            </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row tm-row tm-mb-40">
+                <div class="col-12">
+                    <hr class="tm-hr-primary tm-mb-55">
+                </div>
+                <div class="col-12">
+                    <div class="mb-4">
+                        <img src="img/proto.jpg" alt="Montaje en protoboard" class="img-fluid mr-4">
+                        <div class="media-body">
+                            <h2 class="tm-color-primary tm-post-title mb-2">Montaje en protoboard</h2>
+                            <button class="tm-btn tm-btn-primary mb-3" onclick="location.href='about.html'">Ver
+                                procedimiento</button>
+                            <p class="mb-0 tm-line-height-short">
+                                Sigue explorando para conocer el procedimiento de ensamblaje y las conexiones adecuadas
+                                para lograr un funcionamiento óptimo del circuito.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/templatemo-script.js"></script>
+</body>
+
+</html>

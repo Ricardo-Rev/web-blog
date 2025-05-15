@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xtra Blog</title>
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/templatemo-xtra-blog.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header class="tm-header" id="tm-header">
+        <div class="tm-header-wrapper">
+            <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="tm-site-header">
+                <div class="mb-3 mx-auto tm-site-logo"><i class="fas fa-times fa-2x"></i></div>
+                <h1 class="text-center">PROYECTO ELECTRONOCA</h1>
+            </div>
+            <nav class="tm-nav" id="tm-nav">
+                <ul>
+                    <li class="tm-nav-item"><a href="index.html" class="tm-nav-link">
+                            <i class="fas fa-home"></i>
+                            BLOG HOME
+                        </a></li>
+                    <li class="tm-nav-item"><a href="post.html" class="tm-nav-link">
+                            <i class="fas fa-pen"></i>
+                            VIDEO POST
+                        </a></li>
+                    <li class="tm-nav-item active"><a href="about.html" class="tm-nav-link">
+                            <i class="fas fa-users"></i>
+                            ENSAMBLAJE
+                        </a></li>
+                    <li class="tm-nav-item"><a href="contact.html" class="tm-nav-link">
+                            <i class="far fa-comments"></i>
+                            CONTACTANOS
+                        </a></li>
+                </ul>
+            </nav>
+            <div class="tm-mb-65">
+                <a href="https://facebook.com" class="tm-social-link">
+                    <i class="fab fa-facebook tm-social-icon"></i>
+                </a>
+                <a href="https://twitter.com" class="tm-social-link">
+                    <i class="fab fa-twitter tm-social-icon"></i>
+                </a>
+                <a href="https://instagram.com" class="tm-social-link">
+                    <i class="fab fa-instagram tm-social-icon"></i>
+                </a>
+                <a href="https://linkedin.com" class="tm-social-link">
+                    <i class="fab fa-linkedin tm-social-icon"></i>
+                </a>
+            </div>
+            <p class="tm-mb-80 pr-5 text-white">
+                Bienvenido a mi blog electrónico, un espacio dedicado a compartir proyectos, ideas y conocimientos sobre
+                el fascinante mundo de la electrónica.
+            </p>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <main class="tm-main">
+            <div class="row tm-row tm-mb-45">
+                <div class="col-12">
+                    <hr class="tm-hr-primary tm-mb-55">
+                    <img src="img/diagrama.jpg" alt="Image" class="img-fluid">
+                </div>
+            </div>
+            <div class="row tm-row tm-mb-10">
+                <div class="col-12">
+                    <div class="mb-4">
+                        <h2 class="pt-2 tm-mb-40 tm-color-primary tm-post-title">Diagrama del generador de señales
+                            analógico multifunción</h2>
+                        <p>El ensamblaje de este generador de señales analógicas en protoboard se puede dividir en
+                            varias etapas para facilitar su construcción y verificación.
+                        </p>
+                        <h4 class="pt-2 tm-mb-10 tm-color-primary tm-post-title">1. Fuente de alimentación y conexiones
+                            básicas</h4>
+                        <p>
+                            Se comienza instalando la fuente de alimentación, en este caso una batería de 9V (G1),
+                            conectando el polo positivo y negativo a los rieles de la protoboard que funcionarán
+                            como V+ y tierra (AGND). Esto permite distribuir la energía de manera ordenada a todos
+                            los componentes del circuito.
+                        </p>
+                        <h4 class="pt-2 tm-mb-10 tm-color-primary tm-post-title">2. Montaje del temporizador NE555
+                        </h4>
+                        <p>
+                            El siguiente paso es colocar el integrado NE555 (IC1) en la protoboard, asegurándose
+                            de que esté bien orientado. Se conectan las resistencias R1 (1kΩ) y R2 (4.7kΩ) y el
+                            potenciómetro R3 (100kΩ) junto con el condensador C1 (10nF) para formar la red RC
+                            que determinará la frecuencia de oscilación. Las conexiones de los pines del 555
+                            deben realizarse siguiendo el diagrama, asegurando que cada terminal esté
+                            correctamente vinculado a los componentes y a la alimentación.
+                        </p>
+                        <h4 class="pt-2 tm-mb-10 tm-color-primary tm-post-title">3. Acoplamiento y filtrado de la señal
+                        </h4>
+                        <p>
+                            Desde la salida del 555 (pin 3), se coloca el condensador C2 (1μF) para el acoplamiento de
+                            la señal. A partir de aquí, la señal pasa por las resistencias R4 y R5 (ambas de 10kΩ) y los
+                            condensadores C3 (47nF) y C4 (10nF), que forman los filtros RC encargados de transformar la
+                            onda cuadrada en señales triangulares y senoidales. Es importante ubicar estos componentes
+                            en la protoboard de forma secuencial para facilitar el seguimiento de la señal.
+                        </p>
+                        <h4 class="pt-2 tm-mb-10 tm-color-primary tm-post-title">4. Selección de forma de onda</h4>
+                        <p>
+                            Se instala el interruptor S1, que permite seleccionar entre la salida triangular (TRI) y
+                            senoidal (SEN). El punto de conexión del interruptor se coloca después de los filtros,
+                            siguiendo el diagrama, y su salida se dirige al control de amplitud.
+                        </p>
+                        <h4 class="pt-2 tm-mb-10 tm-color-primary tm-post-title">5. Control de amplitud y amplificación
+                        </h4>
+                        <p>
+                            A continuación, se conecta el potenciómetro R6 (50kΩ) para ajustar la amplitud de la señal
+                            seleccionada. Esta señal se dirige a la entrada del amplificador LM386 (IC2), que también
+                            debe ser colocado en la protoboard. Se agregan los condensadores C5 y C6 (ambos de 100nF)
+                            para desacoplar la alimentación y estabilizar el funcionamiento del amplificador.
+                        </p>
+                        <h4 class="pt-2 tm-mb-10 tm-color-primary tm-post-title">6. Salidas del generador</h4>
+                        <p>
+                            Por último, se conectan las resistencias R7 y R8 (ambas de 100Ω en paralelo, formando una
+                            carga de 50Ω) a la salida del LM386, y se disponen los puntos de salida X1 (onda cuadrada
+                            directa del 555) y X2 (salida seleccionada entre senoidal o triangular amplificada). Ambas
+                            salidas deben estar claramente identificadas en la protoboard para facilitar su uso.
+                        </p>
+                        <p>
+                            Este enfoque segmentado permite ensamblar el circuito de manera ordenada, verificando el
+                            funcionamiento de cada etapa antes de avanzar a la siguiente, lo que facilita la detección y
+                            corrección de posibles errores durante el montaje.
+                        </p>
+                        <h4 class="pt-2 tm-mb-10 tm-color-primary tm-post-title">7. Señal de salida alternativa</h4>
+                        <p>
+                            se puede agregar un sistema visual para identificar la forma de onda que está activa
+                            mediante LEDs. Para ello, se conectan tres LEDs, cada uno representando una señal diferente:
+                            el LED verde para la señal cuadrada, el LED amarillo para la señal triangular y el LED rojo
+                            para la señal senoidal. Cada LED debe ir en serie con una resistencia de 330 ohmios
+                            conectada a tierra para limitar la corriente y proteger los LEDs. De esta forma, cuando la
+                            señal correspondiente esté activa, el LED asociado se encenderá, proporcionando una
+                            indicación visual clara y sencilla del tipo de onda que está siendo generada por el
+                            circuito. Esta implementación facilita la monitorización rápida del estado del generador sin
+                            necesidad de equipo adicional como un osciloscopio.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row tm-row tm-mb-40">
+                <div class="col-12">
+                    <hr class="tm-hr-primary tm-mb-55">
+                </div>
+                <div class="col-12">
+                    <div class="mb-4">
+                        <img src="img/proto.jpg" alt="Montaje en protoboard" class="img-fluid mr-4">
+                        <div class="media-body">
+                            <h2 class="tm-color-primary tm-post-title mb-2">Video explicativo</h2>
+                            <button class="tm-btn tm-btn-primary mb-3" onclick="location.href='post.html'">Ver
+                                video</button>
+                            <p class="mb-0 tm-line-height-short">
+                                Sigue explorando para conocer de forma visual el funcionamiento óptimo del circuito.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/templatemo-script.js"></script>
+</body>
+
+</html>
